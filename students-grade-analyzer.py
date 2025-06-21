@@ -26,9 +26,11 @@ def count_passed(grades):
             passed +=1
     return passed
 def get_avg_grade(grades):
+    if len(grades)==0:
+        return 0
     total=0
     for grade in grades:
-        total +=grade
+            total +=grade
     return total/ len(grades)
 def display_student_summary(names, grades):
     for name, grade in zip(names, grades):
